@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Big Bear | Contemporary, Mid-Century & Modern Furniture</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            brand: {
+              charcoal: '#1F1E1C',
+              espresso: '#2C2623',
+              cognac: '#A65E2E',
+              cognacDark: '#8A4B20',
+              sand: '#F5F2EB',
+              cream: '#FAF8F5',
+              stone: '#E6E1D6',
+              muted: '#6E6A63',
+              forest: '#2E5A44',
+              forestDark: '#234635'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #FAF8F5;
+      color: #1F1E1C;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #F5F2EB;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #C7BFB3;
+      border-radius: 3px;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .card-hover-zoom img {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-hover-zoom:hover img {
+      transform: scale(1.04);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-brand-cognac selection:text-white">
+
+  <!-- Top Announcement Bar (Article.com inspired) -->
+  <div class="bg-brand-espresso text-brand-sand text-[11px] sm:text-xs py-2 px-3 sm:px-4 border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2 truncate">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-brand-cognac shrink-0"></span>
+        <span class="truncate">Factory-direct modern furniture • Free White-Glove Delivery on orders above ₹50,000.</span>
+        <button id="topBarDesignBtn" type="button" class="hidden md:inline underline hover:text-white font-medium ml-1 shrink-0">Free Interior Design Plan</button>
+      </div>
+      <div class="flex items-center gap-2 sm:gap-3 text-[11px] font-medium ml-auto">
+        <div class="flex items-center gap-1 bg-white/10 rounded px-1.5 py-0.5">
+          <button id="modeDtcBtn" type="button" class="px-1.5 py-0.5 rounded bg-brand-cognac text-white font-semibold transition">Retail</button>
+          <button id="modeB2bBtn" type="button" class="px-1.5 py-0.5 rounded text-white/80 hover:text-white transition">Trade / B2B</button>
+        </div>
+        <div class="flex items-center gap-1">
+          <button id="currInrBtn" type="button" class="px-1.5 py-0.5 rounded bg-white text-brand-charcoal font-semibold">₹ INR</button>
+          <button id="currUsdBtn" type="button" class="px-1.5 py-0.5 rounded text-white/75 hover:text-white">$ USD</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Navigation Header (Mobile-organized + Clean Wordmark Only) -->
+  <header class="sticky top-0 z-40 bg-brand-cream/95 backdrop-blur-md border-b border-brand-stone transition-all">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20 gap-2 sm:gap-4">
+        
+        <!-- Left: Mobile Menu Button + Clean Text Wordmark (No icon logo) -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <button id="mobileMenuBtn" type="button" class="lg:hidden p-2 -ml-1 rounded-lg text-brand-charcoal hover:bg-brand-sand" aria-label="Toggle Menu">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+
+          <a href="#hero" class="focus:outline-none">
+            <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-brand-charcoal block leading-none">BIG BEAR</span>
+          </a>
+        </div>
+
+        <!-- Center: Desktop Primary Nav (Article.com structure) -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-brand-charcoal">
+          <a href="#shop-by-room" class="hover:text-brand-cognac transition">Shop By Room</a>
+          <a href="#catalog" class="hover:text-brand-cognac transition">Best Sellers</a>
+          <a href="#material-match" class="hover:text-brand-cognac transition">Materials</a>
+          <a href="#b2b-pro" class="hover:text-brand-cognac transition flex items-center gap-1.5">
+            <span>Big Bear Pro</span>
+            <span class="text-[10px] bg-brand-sand border border-brand-stone text-brand-cognac px-1.5 py-0.5 rounded font-semibold">Trade</span>
+          </a>
+          <a href="#design-services" class="hover:text-brand-cognac transition">Free Design Plan</a>
+          <a href="#in-the-wild" class="hover:text-brand-cognac transition">Room Tours</a>
+        </nav>
+
+        <!-- Right: Search, Wishlist & Customer Shopping Cart Controls -->
+        <div class="flex items-center gap-1.5 sm:gap-3">
+          <div class="relative hidden md:block w-48 xl:w-64">
+            <input id="headerSearchInput" type="text" placeholder="Search sofas, walnut, beds..." class="w-full pl-9 pr-3 py-2 text-xs bg-brand-sand border border-brand-stone rounded-full focus:outline-none focus:border-brand-cognac text-brand-charcoal placeholder:text-brand-muted transition" />
+            <svg class="w-4 h-4 text-brand-muted absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"/></svg>
+          </div>
+
+          <!-- Saved Favorites Button -->
+          <button id="wishlistFilterBtn" type="button" class="relative p-2 rounded-full hover:bg-brand-sand text-brand-charcoal transition" title="View Saved Favorites">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            <span id="wishlistBadge" class="hidden absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-brand-cognac text-white text-[10px] font-bold flex items-center justify-center">0</span>
+          </button>
+
+          <!-- Customer Cart Button -->
+          <button id="openCartDrawerBtn" type="button" class="flex items-center gap-1.5 sm:gap-2 bg-brand-charcoal hover:bg-brand-cognac text-white px-3 sm:px-4 py-2 rounded-full text-xs font-medium transition shadow-xs">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <span class="hidden sm:inline">Cart</span>
+            <span id="cartCountBadge" class="bg-white/20 px-1.5 py-0.5 rounded-full text-[11px] font-bold">0</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Search Bar (Always accessible and organized on phones) -->
+      <div class="md:hidden pb-2.5">
+        <div class="relative">
+          <input id="mobileSearchInput" type="text" placeholder="Search sofas, dining sets, walnut, oak..." class="w-full pl-9 pr-3 py-2 text-xs bg-brand-sand border border-brand-stone rounded-full focus:outline-none focus:border-brand-cognac text-brand-charcoal placeholder:text-brand-muted" />
+          <svg class="w-4 h-4 text-brand-muted absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"/></svg>
+        </div>
+      </div>
+
+      <!-- Mobile Drawer Menu -->
+      <div id="mobileMenuPanel" class="hidden lg:hidden pb-4 pt-2 border-t border-brand-stone space-y-2">
+        <div class="grid grid-cols-2 gap-2 text-xs font-medium">
+          <a href="#shop-by-room" class="mobile-nav-link p-2.5 rounded-lg bg-brand-sand hover:bg-brand-stone text-brand-charcoal">Shop By Room</a>
+          <a href="#catalog" class="mobile-nav-link p-2.5 rounded-lg bg-brand-sand hover:bg-brand-stone text-brand-charcoal">Best Sellers</a>
+          <a href="#material-match" class="mobile-nav-link p-2.5 rounded-lg bg-brand-sand hover:bg-brand-stone text-brand-charcoal">Materials</a>
+          <a href="#b2b-pro" class="mobile-nav-link p-2.5 rounded-lg bg-brand-sand hover:bg-brand-stone text-brand-charcoal">Big Bear Pro (Trade)</a>
+          <a href="#design-services" class="mobile-nav-link p-2.5 rounded-lg bg-brand-sand hover:bg-brand-stone text-brand-charcoal">Free Design Plan</a>
+          <a href="#in-the-wild" class="mobile-nav-link p-2.5 rounded-lg bg-brand-sand hover:bg-brand-stone text-brand-charcoal">Customer Spaces</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (Article.com "Find your material match" signature hero) -->
+  <section id="hero" class="relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8">
+      <div class="relative rounded-2xl overflow-hidden shadow-lg bg-brand-espresso min-h-[420px] sm:min-h-[540px] flex items-end sm:items-center">
+        <img
+          src="images/hero-living-room.jpg"
+          alt="Big Bear Flagship Living Room Collection"
+          class="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/10 sm:bg-gradient-to-r sm:from-black/75 sm:via-black/40 sm:to-transparent"></div>
+
+        <div class="relative z-10 p-5 sm:p-12 lg:p-16 max-w-xl text-white w-full">
+          <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full text-[11px] sm:text-xs font-medium mb-3 sm:mb-4">
+            <span>Factory-Direct Craftsmanship • No Middlemen</span>
+          </div>
+          <h1 class="font-serif text-3xl sm:text-5xl font-semibold tracking-tight leading-[1.12] mb-3 sm:mb-4">
+            Find your material match.
+          </h1>
+          <p class="text-xs sm:text-base text-white/90 leading-relaxed mb-5 sm:mb-6">
+            From full-grain aniline cognac leathers to kiln-dried American walnut and solid teak—your sofa soulmate is just a click away. Crafted in our own workshops and delivered straight to your living room.
+          </p>
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
+            <a href="#catalog" class="text-center bg-white text-brand-charcoal hover:bg-brand-sand px-6 py-3 sm:py-3.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide uppercase transition shadow">
+              Shop Sofas &amp; Best Sellers
+            </a>
+            <a href="#shop-by-room" class="text-center bg-brand-cognac hover:bg-brand-cognacDark text-white px-6 py-3 sm:py-3.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide uppercase transition shadow">
+              Explore Rooms
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Value Proposition Strip -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-4 sm:mt-6 bg-brand-sand border border-brand-stone rounded-xl p-3.5 sm:p-5">
+        <div class="flex items-start gap-2.5 sm:gap-3">
+          <div class="p-2 rounded-lg bg-white text-brand-cognac shrink-0">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <div>
+            <p class="text-xs font-semibold text-brand-charcoal">Factory-Direct Pricing</p>
+            <p class="text-[11px] text-brand-muted mt-0.5 leading-snug">Up to 40% less than traditional showrooms—crafted in our own mills.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-2.5 sm:gap-3">
+          <div class="p-2 rounded-lg bg-white text-brand-cognac shrink-0">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+          </div>
+          <div>
+            <p class="text-xs font-semibold text-brand-charcoal">Fast White-Glove Delivery</p>
+            <p class="text-[11px] text-brand-muted mt-0.5 leading-snug">In-room delivery, full assembly, and packaging removal included.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-2.5 sm:gap-3">
+          <div class="p-2 rounded-lg bg-white text-brand-cognac shrink-0">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <div>
+            <p class="text-xs font-semibold text-brand-charcoal">Contract-Grade Durability</p>
+            <p class="text-[11px] text-brand-muted mt-0.5 leading-snug">Kiln-dried solid hardwood frames built for homes &amp; commercial spaces.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-2.5 sm:gap-3">
+          <div class="p-2 rounded-lg bg-white text-brand-cognac shrink-0">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          </div>
+          <div>
+            <p class="text-xs font-semibold text-brand-charcoal">30-Day Home Trial</p>
+            <p class="text-[11px] text-brand-muted mt-0.5 leading-snug">Live with your furniture for 30 days—easy returns if it's not a fit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop By Room Section (Article.com's core visual navigation grid) -->
+  <section id="shop-by-room" class="py-8 sm:py-14 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-5 sm:mb-7 gap-1">
+      <div>
+        <span class="text-[11px] sm:text-xs uppercase tracking-[0.18em] text-brand-cognac font-semibold">Curated Spaces</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-brand-charcoal mt-0.5">Shop By Room</h2>
+      </div>
+      <p class="text-xs sm:text-sm text-brand-muted">Select a room to filter our collection below.</p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4" id="roomCardsGrid">
+      <!-- Room Card 1: Living Room -->
+      <button type="button" data-room-select="Living Room" class="room-tile group text-left rounded-xl overflow-hidden bg-white border border-brand-stone shadow-2xs hover:shadow-md transition card-hover-zoom">
+        <div class="aspect-[4/3] overflow-hidden bg-brand-sand relative">
+          <img src="images/kodiak-leather-sofa.jpg" alt="Living Room" class="w-full h-full object-cover" />
+        </div>
+        <div class="p-2.5 sm:p-3.5 flex items-center justify-between">
+          <div>
+            <p class="text-xs sm:text-sm font-semibold text-brand-charcoal group-hover:text-brand-cognac transition">Living Room</p>
+            <p class="text-[10px] sm:text-[11px] text-brand-muted">Sofas &amp; Lounge</p>
+          </div>
+          <span class="text-brand-muted text-xs group-hover:translate-x-0.5 transition">→</span>
+        </div>
+      </button>
+
+      <!-- Room Card 2: Dining & Kitchen -->
+      <button type="button" data-room-select="Dining & Kitchen" class="room-tile group text-left rounded-xl overflow-hidden bg-white border border-brand-stone shadow-2xs hover:shadow-md transition card-hover-zoom">
+        <div class="aspect-[4/3] overflow-hidden bg-brand-sand relative">
+          <img src="images/heidi-walnut-dining.jpg" alt="Dining & Kitchen" class="w-full h-full object-cover" />
+        </div>
+        <div class="p-2.5 sm:p-3.5 flex items-center justify-between">
+          <div>
+            <p class="text-xs sm:text-sm font-semibold text-brand-charcoal group-hover:text-brand-cognac transition">Dining Room</p>
+            <p class="text-[10px] sm:text-[11px] text-brand-muted">Tables &amp; Chairs</p>
+          </div>
+          <span class="text-brand-muted text-xs group-hover:translate-x-0.5 transition">→</span>
+        </div>
+      </button>
+
+      <!-- Room Card 3: Bedroom -->
+      <button type="button" data-room-select="Bedroom" class="room-tile group text-left rounded-xl overflow-hidden bg-white border border-brand-stone shadow-2xs hover:shadow-md transition card-hover-zoom">
+        <div class="aspect-[4/3] overflow-hidden bg-brand-sand relative">
+          <img src="images/lenia-oak-bed.jpg" alt="Bedroom" class="w-full h-full object-cover" />
+        </div>
+        <div class="p-2.5 sm:p-3.5 flex items-center justify-between">
+          <div>
+            <p class="text-xs sm:text-sm font-semibold text-brand-charcoal group-hover:text-brand-cognac transition">Bedroom</p>
+            <p class="text-[10px] sm:text-[11px] text-brand-muted">Beds &amp; Nightstands</p>
+          </div>
+          <span class="text-brand-muted text-xs group-hover:translate-x-0.5 transition">→</span>
+        </div>
+      </button>
+
+      <!-- Room Card 4: Accent Seating -->
+      <button type="button" data-room-select="Accent & Office" class="room-tile group text-left rounded-xl overflow-hidden bg-white border border-brand-stone shadow-2xs hover:shadow-md transition card-hover-zoom">
+        <div class="aspect-[4/3] overflow-hidden bg-brand-sand relative">
+          <img src="images/kuma-boucle-chair.jpg" alt="Accent & Office" class="w-full h-full object-cover" />
+        </div>
+        <div class="p-2.5 sm:p-3.5 flex items-center justify-between">
+          <div>
+            <p class="text-xs sm:text-sm font-semibold text-brand-charcoal group-hover:text-brand-cognac transition">Home Office</p>
+            <p class="text-[10px] sm:text-[11px] text-brand-muted">Lounge &amp; Study</p>
+          </div>
+          <span class="text-brand-muted text-xs group-hover:translate-x-0.5 transition">→</span>
+        </div>
+      </button>
+
+      <!-- Room Card 5: Storage & Media -->
+      <button type="button" data-room-select="Storage & Media" class="room-tile group text-left rounded-xl overflow-hidden bg-white border border-brand-stone shadow-2xs hover:shadow-md transition card-hover-zoom">
+        <div class="aspect-[4/3] overflow-hidden bg-brand-sand relative">
+          <img src="images/cooper-walnut-sideboard.jpg" alt="Storage & Media" class="w-full h-full object-cover" />
+        </div>
+        <div class="p-2.5 sm:p-3.5 flex items-center justify-between">
+          <div>
+            <p class="text-xs sm:text-sm font-semibold text-brand-charcoal group-hover:text-brand-cognac transition">Storage</p>
+            <p class="text-[10px] sm:text-[11px] text-brand-muted">Sideboards &amp; Media</p>
+          </div>
+          <span class="text-brand-muted text-xs group-hover:translate-x-0.5 transition">→</span>
+        </div>
+      </button>
+
+      <!-- Room Card 6: Outdoor -->
+      <button type="button" data-room-select="Outdoor" class="room-tile group text-left rounded-xl overflow-hidden bg-white border border-brand-stone shadow-2xs hover:shadow-md transition card-hover-zoom">
+        <div class="aspect-[4/3] overflow-hidden bg-brand-sand relative">
+          <img src="images/solstice-teak-outdoor.jpg" alt="Outdoor" class="w-full h-full object-cover" />
+        </div>
+        <div class="p-2.5 sm:p-3.5 flex items-center justify-between">
+          <div>
+            <p class="text-xs sm:text-sm font-semibold text-brand-charcoal group-hover:text-brand-cognac transition">Outdoor</p>
+            <p class="text-[10px] sm:text-[11px] text-brand-muted">Solid Teak Sets</p>
+          </div>
+          <span class="text-brand-muted text-xs group-hover:translate-x-0.5 transition">→</span>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <!-- Shop By Material Bar (Horizontally scrollable on mobile for clean organization) -->
+  <section id="material-match" class="py-6 sm:py-8 bg-brand-sand border-y border-brand-stone">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4">
+        <div>
+          <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-brand-cognac font-semibold">Material Library</span>
+          <h3 class="font-serif text-xl sm:text-2xl font-semibold text-brand-charcoal">Shop By Material</h3>
+          <p class="text-xs text-brand-muted mt-0.5">Certified sustainable solid timber and commercial-grade upholstery.</p>
+        </div>
+
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1" id="materialFilterPills">
+          <button type="button" data-material="All" class="mat-pill shrink-0 px-3.5 py-2 rounded-full text-xs font-semibold bg-brand-charcoal text-white transition">
+            All Materials
+          </button>
+          <button type="button" data-material="Full-Grain Leather" class="mat-pill shrink-0 px-3.5 py-2 rounded-full text-xs font-medium bg-white border border-brand-stone text-brand-charcoal hover:border-brand-cognac flex items-center gap-2 transition">
+            <span class="w-3 h-3 rounded-full bg-[#A65E2E] inline-block"></span>
+            <span>Charme Leather</span>
+          </button>
+          <button type="button" data-material="American Walnut" class="mat-pill shrink-0 px-3.5 py-2 rounded-full text-xs font-medium bg-white border border-brand-stone text-brand-charcoal hover:border-brand-cognac flex items-center gap-2 transition">
+            <span class="w-3 h-3 rounded-full bg-[#5C3A21] inline-block"></span>
+            <span>Dark Walnut</span>
+          </button>
+          <button type="button" data-material="White Oak" class="mat-pill shrink-0 px-3.5 py-2 rounded-full text-xs font-medium bg-white border border-brand-stone text-brand-charcoal hover:border-brand-cognac flex items-center gap-2 transition">
+            <span class="w-3 h-3 rounded-full bg-[#D2B48C] inline-block"></span>
+            <span>Smoked White Oak</span>
+          </button>
+          <button type="button" data-material="Bouclé Fabric" class="mat-pill shrink-0 px-3.5 py-2 rounded-full text-xs font-medium bg-white border border-brand-stone text-brand-charcoal hover:border-brand-cognac flex items-center gap-2 transition">
+            <span class="w-3 h-3 rounded-full bg-[#F3EFE6] border border-gray-300 inline-block"></span>
+            <span>Alabaster Bouclé</span>
+          </button>
+          <button type="button" data-material="Grade-A Teak" class="mat-pill shrink-0 px-3.5 py-2 rounded-full text-xs font-medium bg-white border border-brand-stone text-brand-charcoal hover:border-brand-cognac flex items-center gap-2 transition">
+            <span class="w-3 h-3 rounded-full bg-[#B5834C] inline-block"></span>
+            <span>Outdoor Teak</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Product Catalog ("Crowd Favorites / Top Sellers" with Add to Cart & Buy Now) -->
+  <section id="catalog" class="py-10 sm:py-16 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6 sm:mb-8">
+      <div>
+        <span class="text-[11px] sm:text-xs uppercase tracking-[0.18em] text-brand-cognac font-semibold">Crowd Favorites • Shop Top Sellers</span>
+        <h2 class="font-serif text-2xl sm:text-4xl font-semibold text-brand-charcoal mt-1">Meet the styles our customers love to live with.</h2>
+      </div>
+
+      <!-- Mobile-organized Filter & Sort Bar -->
+      <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-2 sm:gap-3">
+        <!-- Room Category Filter -->
+        <select id="roomSelectDropdown" aria-label="Filter by Room" class="w-full sm:w-auto px-3 py-2 text-xs font-medium bg-white border border-brand-stone rounded-lg text-brand-charcoal focus:outline-none focus:border-brand-cognac">
+          <option value="All">All Rooms (8)</option>
+          <option value="Living Room">Living Room</option>
+          <option value="Dining & Kitchen">Dining &amp; Kitchen</option>
+          <option value="Bedroom">Bedroom</option>
+          <option value="Accent & Office">Home Office &amp; Lounge</option>
+          <option value="Storage & Media">Storage &amp; Media</option>
+          <option value="Outdoor">Outdoor</option>
+        </select>
+
+        <!-- Sort Dropdown -->
+        <select id="sortSelectDropdown" aria-label="Sort Products" class="w-full sm:w-auto px-3 py-2 text-xs font-medium bg-white border border-brand-stone rounded-lg text-brand-charcoal focus:outline-none focus:border-brand-cognac">
+          <option value="featured">Sort: Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="lead-time">Fastest Delivery</option>
+        </select>
+
+        <!-- Contract Grade Filter -->
+        <button id="contractGradeToggleBtn" type="button" class="px-3 py-2 text-xs font-medium bg-white border border-brand-stone rounded-lg text-brand-charcoal hover:border-brand-cognac transition flex items-center justify-center gap-1.5">
+          <span id="contractCheckDot" class="w-2 h-2 rounded-full bg-brand-muted"></span>
+          <span>Contract Grade</span>
+        </button>
+
+        <button id="resetFiltersBtn" type="button" class="text-xs text-brand-cognac hover:underline font-medium px-2 py-2 text-center">
+          Reset Filters
+        </button>
+      </div>
+    </div>
+
+    <!-- Active Filter Indicator -->
+    <div id="activeFilterBanner" class="hidden mb-6 bg-brand-sand border border-brand-stone rounded-lg px-4 py-2.5 flex items-center justify-between text-xs">
+      <span id="activeFilterText" class="font-medium text-brand-charcoal">Showing filtered products</span>
+      <button id="clearBannerFiltersBtn" type="button" class="text-brand-cognac font-semibold hover:underline shrink-0 ml-2">Show All</button>
+    </div>
+
+    <!-- Product Grid -->
+    <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+      <!-- Dynamically populated by JS -->
+    </div>
+  </section>
+
+  <!-- Editorial Split Banner: Storage & Bedroom Sets (Article.com signature mid-page callouts) -->
+  <section class="py-6 sm:py-8 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+      <!-- Card 1: Storage Made Stylish -->
+      <div class="rounded-2xl overflow-hidden bg-brand-espresso text-white grid grid-cols-1 sm:grid-cols-2 shadow-md">
+        <div class="p-6 sm:p-8 flex flex-col justify-between order-2 sm:order-1">
+          <div>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-brand-sand/75">Tambour &amp; Solid Walnut</span>
+            <h3 class="font-serif text-2xl font-semibold mt-1 mb-2">Storage, made stylish.</h3>
+            <p class="text-xs text-white/80 leading-relaxed">
+              Give everything a place without compromising your space. Hand-fitted fluted sliding doors and cable-ready media compartments.
+            </p>
+          </div>
+          <div class="mt-5 sm:mt-6">
+            <button type="button" data-room-jump="Storage & Media" class="inline-flex items-center gap-2 bg-white text-brand-charcoal hover:bg-brand-sand px-4 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition">
+              <span>Shop Storage</span>
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+        <div class="min-h-[200px] sm:min-h-[220px] bg-brand-charcoal order-1 sm:order-2">
+          <img src="images/cooper-walnut-sideboard.jpg" alt="Solid Walnut Sideboard" class="w-full h-full object-cover" />
+        </div>
+      </div>
+
+      <!-- Card 2: Sweet Dreams Bedroom Sets -->
+      <div class="rounded-2xl overflow-hidden bg-brand-sand border border-brand-stone text-brand-charcoal grid grid-cols-1 sm:grid-cols-2 shadow-2xs">
+        <div class="p-6 sm:p-8 flex flex-col justify-between order-2 sm:order-1">
+          <div>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-brand-cognac font-semibold">Bedroom Bundles</span>
+            <h3 class="font-serif text-2xl font-semibold mt-1 mb-2">Sweet dreams are made of this.</h3>
+            <p class="text-xs text-brand-muted leading-relaxed">
+              More matching, less overthinking—these solid white oak bed and floating nightstand sets make styling refreshingly stress-free.
+            </p>
+          </div>
+          <div class="mt-5 sm:mt-6">
+            <button type="button" data-room-jump="Bedroom" class="inline-flex items-center gap-2 bg-brand-charcoal text-white hover:bg-brand-cognac px-4 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition">
+              <span>Shop Bedroom</span>
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+        <div class="min-h-[200px] sm:min-h-[220px] bg-white order-1 sm:order-2">
+          <img src="images/lenia-oak-bed.jpg" alt="Oak Platform Bed Bundle" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Big Bear Pro (Trade & B2B) + Free Interior Design Plan Section -->
+  <section id="b2b-pro" class="py-10 sm:py-16 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+    <div class="bg-white border border-brand-stone rounded-2xl shadow-2xs overflow-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-12">
+        
+        <!-- Left Column: B2B Manufacturing Heritage & Trade Perks -->
+        <div class="lg:col-span-5 bg-brand-espresso text-white p-6 sm:p-10 flex flex-col justify-between">
+          <div>
+            <div class="inline-flex items-center gap-2 bg-brand-cognac/30 border border-brand-cognac text-brand-sand px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider mb-4">
+              Big Bear Pro • Trade &amp; Commercial
+            </div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-semibold leading-tight mb-3">
+              Crafted for homes, hospitality, and modern workspaces.
+            </h2>
+            <p class="text-xs sm:text-sm text-white/80 leading-relaxed mb-6">
+              As a direct furniture manufacturer, Big Bear supplies both residential homeowners and commercial projects across India. Switch between Retail and Trade pricing anytime to preview volume discounts for interior designers, cafés, hotels, and offices.
+            </p>
+
+            <div class="space-y-3 border-t border-white/15 pt-5 text-xs">
+              <div class="flex items-center justify-between">
+                <span class="text-white/75">Direct Retail (Single Unit)</span>
+                <span class="font-semibold text-brand-sand">Factory-Direct Price</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-white/75">Trade &amp; Hospitality (5–19 Units)</span>
+                <span class="font-semibold text-white">Up to 22% Off + Custom Finishes</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-white/75">Commercial Bulk (20+ Units)</span>
+                <span class="font-semibold text-white">Up to 28% Off + GST Invoice</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 sm:mt-8 pt-5 border-t border-white/15 flex flex-wrap items-center justify-between gap-3">
+            <div class="text-[11px] text-white/70">
+              10-Year Structural Frame Warranty • Custom Upholstery
+            </div>
+            <button id="switchToB2bModeBtn" type="button" class="w-full sm:w-auto bg-brand-cognac hover:bg-brand-cognacDark text-white px-4 py-2.5 rounded-lg text-xs font-semibold transition">
+              Toggle Trade / B2B Pricing
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column: Free Interior Design Plan Form (Article.com signature service) -->
+        <div id="design-services" class="lg:col-span-7 p-6 sm:p-10">
+          <span class="text-xs uppercase tracking-[0.18em] text-brand-cognac font-semibold">Free Interior Design Service</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-semibold text-brand-charcoal mt-1 mb-2">
+            Get a free custom design plan.
+          </h3>
+          <p class="text-xs sm:text-sm text-brand-muted mb-6">
+            Complete a short form to get a personalized 3D room rendering, product picks, and material mood board from Big Bear's accredited interior stylists—no obligation to buy.
+          </p>
+
+          <form id="designPlanForm" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+              <div>
+                <label for="dpName" class="block text-xs font-semibold text-brand-charcoal mb-1">Full Name *</label>
+                <input id="dpName" type="text" required placeholder="e.g., Rohan Mehta" class="w-full px-3.5 py-2.5 text-xs bg-brand-cream border border-brand-stone rounded-lg focus:outline-none focus:border-brand-cognac" />
+              </div>
+              <div>
+                <label for="dpBuyerType" class="block text-xs font-semibold text-brand-charcoal mb-1">Project Type</label>
+                <select id="dpBuyerType" class="w-full px-3.5 py-2.5 text-xs bg-brand-cream border border-brand-stone rounded-lg focus:outline-none focus:border-brand-cognac">
+                  <option value="Homeowner (Residential)">Homeowner (Single Room or Full Home)</option>
+                  <option value="Interior Designer / Architect">Interior Designer / Architect</option>
+                  <option value="Hospitality / Cafe / Hotel">Hospitality / Café / Boutique Hotel</option>
+                  <option value="Corporate Workspace">Corporate Workspace</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4">
+              <div>
+                <label for="dpRoom" class="block text-xs font-semibold text-brand-charcoal mb-1">Room to Style</label>
+                <select id="dpRoom" class="w-full px-3.5 py-2.5 text-xs bg-brand-cream border border-brand-stone rounded-lg focus:outline-none focus:border-brand-cognac">
+                  <option value="Living Room">Living Room</option>
+                  <option value="Dining & Kitchen">Dining &amp; Kitchen</option>
+                  <option value="Bedroom Suite">Bedroom Suite</option>
+                  <option value="Full Home Package">Full Home Package</option>
+                  <option value="Outdoor Patio">Outdoor Patio</option>
+                </select>
+              </div>
+              <div>
+                <label for="dpMaterial" class="block text-xs font-semibold text-brand-charcoal mb-1">Material Preference</label>
+                <select id="dpMaterial" class="w-full px-3.5 py-2.5 text-xs bg-brand-cream border border-brand-stone rounded-lg focus:outline-none focus:border-brand-cognac">
+                  <option value="Charme Cognac Leather & Oak">Charme Cognac Leather &amp; Oak</option>
+                  <option value="American Walnut & Bouclé">American Walnut &amp; Bouclé</option>
+                  <option value="Smoked White Oak & Linen">Smoked White Oak &amp; Linen</option>
+                  <option value="Grade-A Teak Outdoor">Grade-A Teak Outdoor</option>
+                </select>
+              </div>
+              <div>
+                <label for="dpCity" class="block text-xs font-semibold text-brand-charcoal mb-1">City &amp; PIN Code *</label>
+                <input id="dpCity" type="text" required placeholder="e.g., Hyderabad 500034" class="w-full px-3.5 py-2.5 text-xs bg-brand-cream border border-brand-stone rounded-lg focus:outline-none focus:border-brand-cognac" />
+              </div>
+            </div>
+
+            <div>
+              <label for="dpNotes" class="block text-xs font-semibold text-brand-charcoal mb-1">Style Notes or Dimensions</label>
+              <textarea id="dpNotes" rows="2" placeholder="Share room dimensions, seating capacity, or custom finish ideas..." class="w-full px-3.5 py-2 text-xs bg-brand-cream border border-brand-stone rounded-lg focus:outline-none focus:border-brand-cognac"></textarea>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1">
+              <p id="designFormFeedback" class="text-[11px] text-brand-muted">
+                Free 3D layout &amp; mood board delivered within 24 hours.
+              </p>
+              <button type="submit" class="w-full sm:w-auto bg-brand-charcoal hover:bg-brand-cognac text-white font-semibold px-6 py-3 rounded-full text-xs transition shadow-xs">
+                Request Free Design Plan
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- "Great style in the wild" Customer Room Tours (Article.com signature social proof section) -->
+  <section id="in-the-wild" class="py-10 sm:py-12 bg-brand-sand border-t border-brand-stone">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-6 sm:mb-8 gap-2">
+        <div>
+          <span class="text-xs uppercase tracking-[0.18em] text-brand-cognac font-semibold">#BigBearSpaces</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-brand-charcoal mt-1">Great style in the wild.</h2>
+          <p class="text-xs sm:text-sm text-brand-muted mt-1">Looking for inspo? Check out how our customers have styled their own Big Bear furniture.</p>
+        </div>
+        <button id="shopFeaturedRoomBtn" type="button" class="text-xs font-semibold text-brand-cognac hover:underline self-start sm:self-auto">
+          View Complete Living Room Bundle →
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+        <!-- Tour Card 1 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-brand-stone shadow-2xs flex flex-col justify-between">
+          <div class="aspect-[4/3] overflow-hidden relative">
+            <img src="images/hero-living-room.jpg" alt="Customer Living Room" class="w-full h-full object-cover" />
+            <span class="absolute bottom-3 left-3 bg-black/70 backdrop-blur-xs text-white text-[11px] px-2.5 py-1 rounded-full">@rusticmodern_home • Jubilee Hills</span>
+          </div>
+          <div class="p-4 flex items-center justify-between gap-2">
+            <div>
+              <p class="text-xs font-semibold text-brand-charcoal">Kodiak 88" Cognac Sofa + Oak Table</p>
+              <p class="text-[11px] text-brand-muted">"Warm leather patina and rock-solid oak frame."</p>
+            </div>
+            <button type="button" data-quick-buy="bb-sofa-01" class="px-3.5 py-1.5 rounded-full bg-brand-sand hover:bg-brand-charcoal hover:text-white text-brand-charcoal text-[11px] font-semibold transition shrink-0">
+              Shop Look
+            </button>
+          </div>
+        </div>
+
+        <!-- Tour Card 2 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-brand-stone shadow-2xs flex flex-col justify-between">
+          <div class="aspect-[4/3] overflow-hidden relative">
+            <img src="images/heidi-walnut-dining.jpg" alt="Customer Dining Space" class="w-full h-full object-cover" />
+            <span class="absolute bottom-3 left-3 bg-black/70 backdrop-blur-xs text-white text-[11px] px-2.5 py-1 rounded-full">@atelier_living • Bengaluru</span>
+          </div>
+          <div class="p-4 flex items-center justify-between gap-2">
+            <div>
+              <p class="text-xs font-semibold text-brand-charcoal">Heidi Solid Walnut 6-Seater Set</p>
+              <p class="text-[11px] text-brand-muted">"The walnut grain and sculpted chairs are stunning."</p>
+            </div>
+            <button type="button" data-quick-buy="bb-dining-02" class="px-3.5 py-1.5 rounded-full bg-brand-sand hover:bg-brand-charcoal hover:text-white text-brand-charcoal text-[11px] font-semibold transition shrink-0">
+              Shop Look
+            </button>
+          </div>
+        </div>
+
+        <!-- Tour Card 3 -->
+        <div class="bg-white rounded-xl overflow-hidden border border-brand-stone shadow-2xs flex flex-col justify-between">
+          <div class="aspect-[4/3] overflow-hidden relative">
+            <img src="images/solstice-teak-outdoor.jpg" alt="Customer Patio" class="w-full h-full object-cover" />
+            <span class="absolute bottom-3 left-3 bg-black/70 backdrop-blur-xs text-white text-[11px] px-2.5 py-1 rounded-full">@villa_courtyard • Goa</span>
+          </div>
+          <div class="p-4 flex items-center justify-between gap-2">
+            <div>
+              <p class="text-xs font-semibold text-brand-charcoal">Solstice Grade-A Teak Patio Sectional</p>
+              <p class="text-[11px] text-brand-muted">"Weatherproof cushions and solid teak craftsmanship."</p>
+            </div>
+            <button type="button" data-quick-buy="bb-outdoor-06" class="px-3.5 py-1.5 rounded-full bg-brand-sand hover:bg-brand-charcoal hover:text-white text-brand-charcoal text-[11px] font-semibold transition shrink-0">
+              Shop Look
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (Clean Wordmark Only + Article.com Multi-Column Architecture) -->
+  <footer class="bg-brand-charcoal text-brand-sand pt-12 sm:pt-14 pb-10 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <!-- Newsletter Subscription -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 pb-10 sm:pb-12 border-b border-white/15">
+        <div class="lg:col-span-6">
+          <span class="font-serif text-2xl font-bold tracking-tight text-white block mb-2">BIG BEAR</span>
+          <p class="text-xs text-brand-sand/75 max-w-md leading-relaxed">
+            Contemporary, mid-century, and modern furniture crafted in our own manufacturing facilities. Built with solid kiln-dried timber and delivered directly to your door.
+          </p>
+        </div>
+        <div class="lg:col-span-6">
+          <p class="text-xs font-semibold uppercase tracking-wider text-brand-sand mb-2">Get new products and promotions in your inbox.</p>
+          <form id="newsletterForm" class="flex flex-col sm:flex-row gap-2">
+            <input id="newsletterInput" type="email" required placeholder="Enter your email address..." class="flex-1 px-4 py-2.5 rounded-lg bg-white/10 border border-white/20 text-xs text-white placeholder:text-white/50 focus:outline-none focus:border-brand-cognac" />
+            <button type="submit" class="bg-brand-cognac hover:bg-brand-cognacDark text-white px-5 py-2.5 rounded-lg text-xs font-semibold transition shrink-0">
+              Subscribe
+            </button>
+          </form>
+          <p id="newsletterFeedback" class="hidden text-[11px] text-emerald-400 mt-2">Thank you for subscribing! You'll receive our newest seasonal lookbook and offers.</p>
+        </div>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 py-8 sm:py-10 text-xs">
+        <div>
+          <h4 class="font-semibold text-white uppercase tracking-wider mb-3">Shop By Category</h4>
+          <ul class="space-y-2 text-brand-sand/75">
+            <li><a href="#catalog" data-footer-room="Living Room" class="footer-room-link hover:text-white">Living Room Sofas</a></li>
+            <li><a href="#catalog" data-footer-room="Dining & Kitchen" class="footer-room-link hover:text-white">Walnut Dining Tables</a></li>
+            <li><a href="#catalog" data-footer-room="Bedroom" class="footer-room-link hover:text-white">Solid Oak Beds</a></li>
+            <li><a href="#catalog" data-footer-room="Storage & Media" class="footer-room-link hover:text-white">Fluted Sideboards</a></li>
+            <li><a href="#catalog" data-footer-room="Outdoor" class="footer-room-link hover:text-white">Teak Outdoor Sets</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white uppercase tracking-wider mb-3">For Professionals</h4>
+          <ul class="space-y-2 text-brand-sand/75">
+            <li><a href="#b2b-pro" class="hover:text-white">Big Bear Pro (Trade &amp; B2B)</a></li>
+            <li><a href="#b2b-pro" class="hover:text-white">Contract Grade Furniture</a></li>
+            <li><a href="#design-services" class="hover:text-white">Free Interior Design Services</a></li>
+            <li><a href="#in-the-wild" class="hover:text-white">Hospitality &amp; Café Projects</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white uppercase tracking-wider mb-3">Help &amp; Policies</h4>
+          <ul class="space-y-2 text-brand-sand/75">
+            <li><span>White-Glove Shipping &amp; Delivery</span></li>
+            <li><span>30-Day Returns &amp; Exchanges</span></li>
+            <li><span>10-Year Structural Warranty</span></li>
+            <li><span>Care &amp; Maintenance Guide</span></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white uppercase tracking-wider mb-3">Showroom &amp; Factory</h4>
+          <p class="text-brand-sand/75 leading-relaxed mb-3">
+            Big Bear Furniture Manufacturing<br/>
+            Direct E-Commerce &amp; Trade Desk<br/>
+            <span class="text-white font-medium">support@bigbearfurniture.com</span>
+          </p>
+          <button id="footerQuickCheckoutBtn" type="button" class="inline-flex items-center gap-1.5 bg-white/10 hover:bg-brand-cognac text-white px-3.5 py-2 rounded-full text-[11px] font-semibold transition">
+            <span>View Shopping Cart</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-[11px] text-brand-sand/60 gap-2 text-center sm:text-left">
+        <p>© 2026 Big Bear Furniture. All rights reserved.</p>
+        <p>Privacy Policy • Terms of Use • Shipping &amp; Returns</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Over Customer Shopping Cart Drawer -->
+  <div id="cartDrawerBackdrop" class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex justify-end">
+    <div class="bg-brand-cream w-full max-w-md h-full flex flex-col justify-between shadow-2xl border-l border-brand-stone">
+      <!-- Drawer Header -->
+      <div class="p-4 sm:p-5 border-b border-brand-stone flex items-center justify-between bg-white">
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-brand-cognac" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <h3 class="font-serif text-lg font-semibold text-brand-charcoal">Your Shopping Cart</h3>
+        </div>
+        <button id="closeCartDrawerBtn" type="button" class="p-1.5 rounded-full hover:bg-brand-sand text-brand-muted" aria-label="Close Cart">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Free Shipping Progress Banner -->
+      <div class="bg-brand-sand px-4 py-2 border-b border-brand-stone text-[11px] text-brand-charcoal flex items-center justify-between">
+        <span id="shippingBannerText">✓ Qualifies for Free White-Glove Delivery &amp; Assembly</span>
+        <span id="cartModeLabel" class="font-semibold text-brand-cognac">Retail</span>
+      </div>
+
+      <!-- Drawer Items List -->
+      <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-4 sm:p-5 space-y-3.5 custom-scrollbar">
+        <!-- Populated dynamically -->
+      </div>
+
+      <!-- Drawer Footer: Subtotal & Proceed to Checkout -->
+      <div class="p-4 sm:p-5 bg-white border-t border-brand-stone space-y-3">
+        <div class="space-y-1 text-xs">
+          <div class="flex items-center justify-between text-brand-muted">
+            <span>White-Glove Delivery &amp; Assembly</span>
+            <span class="text-brand-forest font-semibold">FREE</span>
+          </div>
+          <div class="flex items-center justify-between pt-1 border-t border-brand-stone">
+            <span class="font-semibold text-brand-charcoal">Subtotal</span>
+            <span id="cartTotalAmount" class="text-lg font-bold text-brand-charcoal">₹0</span>
+          </div>
+        </div>
+        <button id="proceedToCheckoutBtn" type="button" class="w-full bg-brand-charcoal hover:bg-brand-cognac text-white font-semibold py-3.5 px-4 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow transition">
+          <span>Proceed to Checkout &amp; Pay</span>
+          <span>→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Quick-View & Specification Modal -->
+  <div id="quickViewModal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="bg-white rounded-t-2xl sm:rounded-2xl max-w-2xl w-full overflow-hidden shadow-2xl border border-brand-stone max-h-[90vh] overflow-y-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="bg-brand-sand relative aspect-[4/3] md:aspect-auto">
+          <img id="qvImage" src="" alt="Product" class="w-full h-full object-cover" />
+          <span id="qvBadge" class="absolute top-3 left-3 bg-brand-charcoal text-white text-[10px] font-semibold px-2.5 py-1 rounded-full">Best Seller</span>
+        </div>
+        <div class="p-5 sm:p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-1">
+              <span id="qvSku" class="text-[11px] font-mono text-brand-muted">SKU: BB-01</span>
+              <button id="closeQuickViewBtn" type="button" class="p-1.5 rounded-full hover:bg-brand-sand text-brand-muted">✕</button>
+            </div>
+            <h3 id="qvTitle" class="font-serif text-xl font-semibold text-brand-charcoal">Product Name</h3>
+            <p id="qvPrice" class="text-lg font-bold text-brand-cognac mt-1">₹0</p>
+            <p id="qvDesc" class="text-xs text-brand-muted mt-3 leading-relaxed"></p>
+
+            <div class="mt-4 pt-3 border-t border-brand-stone space-y-1.5 text-xs">
+              <div class="flex justify-between"><span class="text-brand-muted">Material:</span><span id="qvMaterial" class="font-medium text-brand-charcoal text-right"></span></div>
+              <div class="flex justify-between"><span class="text-brand-muted">Dimensions:</span><span id="qvDims" class="font-medium text-brand-charcoal text-right"></span></div>
+              <div class="flex justify-between"><span class="text-brand-muted">Dispatch Time:</span><span id="qvLead" class="font-medium text-brand-charcoal text-right"></span></div>
+              <div class="flex justify-between"><span class="text-brand-muted">Trade Price (5+ Units):</span><span id="qvB2bPrice" class="font-semibold text-brand-forest text-right"></span></div>
+            </div>
+          </div>
+
+          <div class="mt-6 flex gap-2.5">
+            <button id="qvAddToCartBtn" type="button" class="flex-1 bg-brand-sand hover:bg-brand-stone text-brand-charcoal py-3 px-4 rounded-xl text-xs font-semibold transition">
+              Add to Cart
+            </button>
+            <button id="qvBuyNowBtn" type="button" class="flex-1 bg-brand-charcoal hover:bg-brand-cognac text-white py-3 px-4 rounded-xl text-xs font-semibold transition">
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Customer Checkout & Payment Showcase Modal (No external gateway required) -->
+  <div id="checkoutModal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="bg-white rounded-t-2xl sm:rounded-2xl max-w-2xl w-full overflow-hidden shadow-2xl border border-brand-stone max-h-[92vh] flex flex-col">
+      <!-- Modal Header -->
+      <div class="p-4 sm:p-5 bg-brand-espresso text-white flex items-center justify-between shrink-0">
+        <div>
+          <h3 class="font-serif text-lg font-semibold">Big Bear Express Checkout</h3>
+          <p class="text-[11px] text-white/75">Free White-Glove Delivery • 30-Day Trial • 10-Year Frame Warranty</p>
+        </div>
+        <button id="closeCheckoutModalBtn" type="button" class="p-1.5 rounded-full hover:bg-white/10 text-white/80">✕</button>
+      </div>
+
+      <!-- Checkout Form View -->
+      <form id="checkoutFormView" class="p-4 sm:p-6 overflow-y-auto space-y-5 text-xs custom-scrollbar flex-1">
+        <!-- Order Summary Box -->
+        <div class="bg-brand-sand p-3.5 sm:p-4 rounded-xl border border-brand-stone">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-semibold uppercase tracking-wider text-[11px] text-brand-cognac">Order Summary</span>
+            <span id="checkoutItemCount" class="text-[11px] text-brand-muted">1 Item</span>
+          </div>
+          <div id="checkoutItemsList" class="space-y-2 max-h-32 overflow-y-auto pr-1 custom-scrollbar">
+            <!-- Populated by JS -->
+          </div>
+          <div class="flex items-center justify-between pt-2.5 mt-2.5 border-t border-brand-stone text-sm font-bold text-brand-charcoal">
+            <span>Total Payable (Incl. Taxes &amp; Delivery)</span>
+            <span id="checkoutGrandTotal" class="text-brand-cognac">₹0</span>
+          </div>
+        </div>
+
+        <!-- Step 1: Shipping & Delivery Address -->
+        <div>
+          <h4 class="font-semibold text-brand-charcoal uppercase tracking-wider text-[11px] mb-2.5">1. Delivery Address</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <input id="chkName" type="text" required placeholder="Full Name *" class="w-full px-3.5 py-2.5 rounded-lg bg-brand-cream border border-brand-stone focus:outline-none focus:border-brand-cognac" />
+            <input id="chkPhone" type="tel" required placeholder="Mobile Number *" class="w-full px-3.5 py-2.5 rounded-lg bg-brand-cream border border-brand-stone focus:outline-none focus:border-brand-cognac" />
+            <input id="chkAddress" type="text" required placeholder="Street Address / Apartment / Floor *" class="sm:col-span-2 w-full px-3.5 py-2.5 rounded-lg bg-brand-cream border border-brand-stone focus:outline-none focus:border-brand-cognac" />
+            <input id="chkCity" type="text" required placeholder="City (e.g., Hyderabad) *" class="w-full px-3.5 py-2.5 rounded-lg bg-brand-cream border border-brand-stone focus:outline-none focus:border-brand-cognac" />
+            <input id="chkPin" type="text" required placeholder="PIN / ZIP Code *" class="w-full px-3.5 py-2.5 rounded-lg bg-brand-cream border border-brand-stone focus:outline-none focus:border-brand-cognac" />
+          </div>
+        </div>
+
+        <!-- Step 2: Payment Options Showcase -->
+        <div>
+          <h4 class="font-semibold text-brand-charcoal uppercase tracking-wider text-[11px] mb-2.5">2. Select Payment Option</h4>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5" id="paymentMethodGrid">
+            <button type="button" data-pay-method="UPI (GPay / PhonePe)" class="pay-method-btn p-3 rounded-xl border-2 border-brand-cognac bg-brand-sand/60 text-left transition">
+              <p class="font-semibold text-brand-charcoal">UPI Instant</p>
+              <p class="text-[10px] text-brand-muted mt-0.5">GPay, PhonePe, Paytm</p>
+            </button>
+            <button type="button" data-pay-method="Credit / Debit Card" class="pay-method-btn p-3 rounded-xl border border-brand-stone bg-white hover:border-brand-cognac text-left transition">
+              <p class="font-semibold text-brand-charcoal">Card / EMI</p>
+              <p class="text-[10px] text-brand-muted mt-0.5">Visa, MasterCard, RuPay</p>
+            </button>
+            <button type="button" data-pay-method="NetBanking / RTGS" class="pay-method-btn p-3 rounded-xl border border-brand-stone bg-white hover:border-brand-cognac text-left transition">
+              <p class="font-semibold text-brand-charcoal">NetBanking</p>
+              <p class="text-[10px] text-brand-muted mt-0.5">All Major Banks &amp; NEFT</p>
+            </button>
+            <button type="button" data-pay-method="Pay on Delivery" class="pay-method-btn p-3 rounded-xl border border-brand-stone bg-white hover:border-brand-cognac text-left transition">
+              <p class="font-semibold text-brand-charcoal">Pay on Delivery</p>
+              <p class="text-[10px] text-brand-muted mt-0.5">Cash / UPI at Doorstep</p>
+            </button>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="pt-2">
+          <button type="submit" class="w-full bg-brand-charcoal hover:bg-brand-cognac text-white font-semibold py-3.5 px-5 rounded-xl text-xs uppercase tracking-wider shadow transition">
+            Complete Order &amp; Pay (<span id="checkoutBtnAmount">₹0</span>)
+          </button>
+        </div>
+      </form>
+
+      <!-- Order Confirmation Screen (Displayed after submitting checkout) -->
+      <div id="checkoutSuccessView" class="hidden p-6 sm:p-8 text-center space-y-4 overflow-y-auto">
+        <div class="w-12 h-12 rounded-full bg-brand-forest/15 text-brand-forest mx-auto flex items-center justify-center text-xl font-bold">
+          ✓
+        </div>
+        <div>
+          <span class="text-[11px] uppercase tracking-widest text-brand-cognac font-semibold">Order Confirmed</span>
+          <h4 class="font-serif text-2xl font-semibold text-brand-charcoal mt-1">Thank you for your Big Bear order!</h4>
+          <p id="confirmOrderMeta" class="text-xs text-brand-muted mt-1">Order #BB-84920 • White-Glove Delivery Scheduled</p>
+        </div>
+        <div id="confirmOrderDetails" class="bg-brand-sand border border-brand-stone rounded-xl p-4 text-left text-xs space-y-1.5 max-w-md mx-auto">
+          <!-- Populated by JS -->
+        </div>
+        <div class="pt-2">
+          <button id="continueShoppingBtn" type="button" class="bg-brand-charcoal hover:bg-brand-cognac text-white font-semibold px-6 py-3 rounded-full text-xs transition">
+            Continue Shopping
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toastBanner" class="hidden fixed bottom-5 right-5 left-5 sm:left-auto z-50 bg-brand-charcoal text-white px-4 py-3 rounded-xl shadow-lg text-xs font-medium flex items-center justify-center sm:justify-start gap-2 border border-white/15">
+    <span class="w-2 h-2 rounded-full bg-brand-cognac shrink-0"></span>
+    <span id="toastText">Added to Cart</span>
+  </div>
+
+  <script>
+    // --- Big Bear Product Catalog (Article.com inspired names, finishes, and B2B/DTC pricing) ---
+    const PRODUCTS = [
+      {
+        id: 'bb-sofa-01',
+        sku: 'BB-SVEN-88',
+        name: 'Kodiak 88" Tufted Leather Sofa',
+        room: 'Living Room',
+        material: 'Full-Grain Leather',
+        swatches: ['Charme Cognac Tan', 'Espresso Brown', 'Obsidian Black'],
+        priceInr: 124900,
+        priceUsd: 1499,
+        b2bDiscount: 0.22,
+        contractGrade: true,
+        badge: 'Best Seller',
+        leadTimeDays: 4,
+        dimensions: '88"W x 38"D x 34"H',
+        image: 'images/kodiak-leather-sofa.jpg',
+        description: 'Our signature mid-century silhouette upholstered in supple full-grain aniline Charme Tan leather with bolster pillows and kiln-dried solid oak legs.'
+      },
+      {
+        id: 'bb-dining-02',
+        sku: 'BB-HEIDI-78',
+        name: 'Heidi 78" Solid Walnut Dining Set (6-Seater)',
+        room: 'Dining & Kitchen',
+        material: 'American Walnut',
+        swatches: ['Natural American Walnut', 'Smoked Espresso Walnut'],
+        priceInr: 89900,
+        priceUsd: 1099,
+        b2bDiscount: 0.25,
+        contractGrade: true,
+        badge: 'Contract Grade',
+        leadTimeDays: 5,
+        dimensions: '78"W x 39"D x 30"H',
+        image: 'images/heidi-walnut-dining.jpg',
+        description: 'Architectural beveled-edge dining table in solid American walnut paired with six ergonomically sculpted mid-century dining chairs.'
+      },
+      {
+        id: 'bb-bed-03',
+        sku: 'BB-LENIA-KG',
+        name: 'Lenia King Platform Bed & Floating Nightstands',
+        room: 'Bedroom',
+        material: 'White Oak',
+        swatches: ['Whitewashed Oak & Oatmeal', 'Natural Oak & Warm Alabaster'],
+        priceInr: 98500,
+        priceUsd: 1199,
+        b2bDiscount: 0.20,
+        contractGrade: true,
+        badge: 'Bedroom Bundle',
+        leadTimeDays: 6,
+        dimensions: '82"W x 86"D x 45"H',
+        image: 'images/lenia-oak-bed.jpg',
+        description: 'Low-profile solid white oak architectural frame with a textured oatmeal woven headboard and two integrated soft-close floating nightstands.'
+      },
+      {
+        id: 'bb-chair-04',
+        sku: 'BB-CERO-01',
+        name: 'Kuma Sculpted Bouclé Lounge Chair',
+        room: 'Accent & Office',
+        material: 'Bouclé Fabric',
+        swatches: ['Alabaster Cream Bouclé', 'Warm Taupe Bouclé', 'Forest Moss'],
+        priceInr: 36900,
+        priceUsd: 449,
+        b2bDiscount: 0.24,
+        contractGrade: true,
+        badge: 'Crowd Favorite',
+        leadTimeDays: 3,
+        dimensions: '31"W x 33"D x 31"H',
+        image: 'images/kuma-boucle-chair.jpg',
+        description: 'Plush heavy-loop Alabaster bouclé meets a warm steam-bent solid ash wood frame. High-resilience foam core rated for residential and boutique lounge use.'
+      },
+      {
+        id: 'bb-storage-05',
+        sku: 'BB-COOPER-70',
+        name: 'Cooper 70" Fluted Tambour Walnut Sideboard',
+        room: 'Storage & Media',
+        material: 'American Walnut',
+        swatches: ['Warm Walnut & Brushed Brass', 'Ebonized Oak & Matte Black'],
+        priceInr: 64500,
+        priceUsd: 799,
+        b2bDiscount: 0.22,
+        contractGrade: false,
+        badge: 'New Arrival',
+        leadTimeDays: 4,
+        dimensions: '70"W x 18"D x 29"H',
+        image: 'images/cooper-walnut-sideboard.jpg',
+        description: 'Mid-century credenza with smooth-gliding fluted tambour doors, adjustable interior shelving, rear acoustic cable cutouts, and brass-capped legs.'
+      },
+      {
+        id: 'bb-outdoor-06',
+        sku: 'BB-SOLSTICE-06',
+        name: 'Solstice Grade-A Teak 5-Piece Outdoor Sectional',
+        room: 'Outdoor',
+        material: 'Grade-A Teak',
+        swatches: ['Natural Teak & Ivory Olefin', 'Teak & Charcoal Performance'],
+        priceInr: 142000,
+        priceUsd: 1699,
+        b2bDiscount: 0.25,
+        contractGrade: true,
+        badge: 'Weatherproof',
+        leadTimeDays: 7,
+        dimensions: '104"W x 104"D x 30"H',
+        image: 'images/solstice-teak-outdoor.jpg',
+        description: 'Sustainably harvested kiln-dried Grade-A teak sectional and slatted coffee table with quick-dry, UV-resistant performance cushions.'
+      },
+      {
+        id: 'bb-living-07',
+        sku: 'BB-TIMBER-SET',
+        name: 'Sierra Complete Living Room Package (Sofa + Chair + Table)',
+        room: 'Living Room',
+        material: 'Full-Grain Leather',
+        swatches: ['Cognac Tan + Cream Bouclé + Oak', 'Espresso + Walnut'],
+        priceInr: 168000,
+        priceUsd: 1999,
+        b2bDiscount: 0.26,
+        contractGrade: true,
+        badge: 'Save 15% Bundle',
+        leadTimeDays: 5,
+        dimensions: 'Full 3-Piece Living Suite',
+        image: 'images/hero-living-room.jpg',
+        description: 'Our complete living room look in a single click: includes the Kodiak 88" Cognac Leather Sofa, Kuma Bouclé Lounge Chair, and Solid Oak Plank Coffee Table.'
+      },
+      {
+        id: 'bb-dining-08',
+        sku: 'BB-NOSH-PAIR',
+        name: 'Nosh Sculpted Solid Walnut Dining Chairs (Set of 2)',
+        room: 'Dining & Kitchen',
+        material: 'American Walnut',
+        swatches: ['Solid Walnut', 'Smoked Oak'],
+        priceInr: 24900,
+        priceUsd: 299,
+        b2bDiscount: 0.28,
+        contractGrade: true,
+        badge: 'Top Value',
+        leadTimeDays: 2,
+        dimensions: '20"W x 21"D x 31"H',
+        image: 'images/heidi-walnut-dining.jpg',
+        description: 'Steam-bent solid walnut backrest with mortise-and-tenon joinery engineered for daily family dining and high-traffic commercial cafés.'
+      }
+    ];
+
+    // --- Application State ---
+    const state = {
+      currency: 'INR', // 'INR' | 'USD'
+      pricingMode: 'DTC', // 'DTC' | 'B2B'
+      selectedRoom: 'All',
+      selectedMaterial: 'All',
+      contractOnly: false,
+      wishlistOnly: false,
+      searchQuery: '',
+      sortBy: 'featured',
+      selectedSwatches: {},
+      wishlist: new Set(),
+      cart: [
+        { productId: 'bb-sofa-01', qty: 1, swatch: 'Charme Cognac Tan' }
+      ],
+      selectedPaymentMethod: 'UPI (GPay / PhonePe)',
+      currentQuickViewId: null
+    };
+
+    PRODUCTS.forEach(p => {
+      state.selectedSwatches[p.id] = p.swatches[0];
+    });
+
+    function getUnitPrice(product) {
+      const base = state.currency === 'INR' ? product.priceInr : product.priceUsd;
+      if (state.pricingMode === 'B2B') {
+        return Math.round(base * (1 - product.b2bDiscount));
+      }
+      return base;
+    }
+
+    function formatCurrency(amount) {
+      if (state.currency === 'INR') {
+        return '₹' + amount.toLocaleString('en-IN');
+      }
+      return '$' + amount.toLocaleString('en-US');
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toastBanner');
+      const text = document.getElementById('toastText');
+      text.textContent = message;
+      toast.classList.remove('hidden');
+      clearTimeout(window.__toastTimer);
+      window.__toastTimer = setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 2600);
+    }
+
+    // --- Render Product Catalog ---
+    function renderCatalog() {
+      const grid = document.getElementById('productsGrid');
+      const banner = document.getElementById('activeFilterBanner');
+      const bannerText = document.getElementById('activeFilterText');
+
+      let filtered = PRODUCTS.filter(p => {
+        if (state.selectedRoom !== 'All' && p.room !== state.selectedRoom) return false;
+        if (state.selectedMaterial !== 'All' && p.material !== state.selectedMaterial) return false;
+        if (state.contractOnly && !p.contractGrade) return false;
+        if (state.wishlistOnly && !state.wishlist.has(p.id)) return false;
+        if (state.searchQuery.trim() !== '') {
+          const q = state.searchQuery.toLowerCase();
+          const match =
+            p.name.toLowerCase().includes(q) ||
+            p.room.toLowerCase().includes(q) ||
+            p.material.toLowerCase().includes(q) ||
+            p.sku.toLowerCase().includes(q) ||
+            p.description.toLowerCase().includes(q);
+          if (!match) return false;
+        }
+        return true;
+      });
+
+      if (state.sortBy === 'price-asc') {
+        filtered.sort((a, b) => getUnitPrice(a) - getUnitPrice(b));
+      } else if (state.sortBy === 'price-desc') {
+        filtered.sort((a, b) => getUnitPrice(b) - getUnitPrice(a));
+      } else if (state.sortBy === 'lead-time') {
+        filtered.sort((a, b) => a.leadTimeDays - b.leadTimeDays);
+      }
+
+      const activeFilters = [];
+      if (state.selectedRoom !== 'All') activeFilters.push(`Room: ${state.selectedRoom}`);
+      if (state.selectedMaterial !== 'All') activeFilters.push(`Material: ${state.selectedMaterial}`);
+      if (state.contractOnly) activeFilters.push('Contract Grade');
+      if (state.wishlistOnly) activeFilters.push('Saved Favorites');
+      if (state.searchQuery.trim()) activeFilters.push(`"${state.searchQuery.trim()}"`);
+
+      if (activeFilters.length > 0) {
+        banner.classList.remove('hidden');
+        bannerText.textContent = `Filtered (${filtered.length}): ${activeFilters.join(' • ')}`;
+      } else {
+        banner.classList.add('hidden');
+      }
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full bg-white border border-brand-stone rounded-2xl p-8 sm:p-10 text-center">
+            <p class="font-serif text-lg sm:text-xl text-brand-charcoal mb-2">No furniture pieces match those exact filters.</p>
+            <p class="text-xs text-brand-muted mb-4">Try clearing a filter to browse our full collection.</p>
+            <button type="button" id="emptyResetBtn" class="bg-brand-charcoal text-white px-5 py-2.5 rounded-full text-xs font-semibold">Reset Filters</button>
+          </div>
+        `;
+        const emptyResetBtn = document.getElementById('emptyResetBtn');
+        if (emptyResetBtn) emptyResetBtn.addEventListener('click', resetAllFilters);
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => {
+        const price = getUnitPrice(p);
+        const basePrice = state.currency === 'INR' ? p.priceInr : p.priceUsd;
+        const isFav = state.wishlist.has(p.id);
+        const currentSwatch = state.selectedSwatches[p.id] || p.swatches[0];
+
+        return `
+          <article class="bg-white rounded-2xl border border-brand-stone overflow-hidden shadow-2xs hover:shadow-md transition flex flex-col justify-between group">
+            <div>
+              <!-- Image Container -->
+              <div class="relative aspect-[4/3] bg-brand-sand overflow-hidden card-hover-zoom">
+                <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover cursor-pointer" data-open-qv="${p.id}" />
+                <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                  <span class="bg-brand-charcoal/90 backdrop-blur-xs text-white text-[10px] font-semibold px-2.5 py-1 rounded-full">${p.badge}</span>
+                  ${p.contractGrade ? `<span class="bg-brand-sand/95 text-brand-cognac border border-brand-stone text-[10px] font-semibold px-2 py-0.5 rounded-full">Contract Grade</span>` : ''}
+                </div>
+                <button type="button" data-toggle-fav="${p.id}" aria-label="Save to favorites" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 hover:bg-white flex items-center justify-center shadow-2xs transition">
+                  <svg class="w-4 h-4 ${isFav ? 'text-brand-cognac fill-current' : 'text-brand-charcoal'}" fill="${isFav ? 'currentColor' : 'none'}" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                  </svg>
+                </button>
+                <button type="button" data-open-qv="${p.id}" class="absolute bottom-3 right-3 bg-white/95 hover:bg-brand-charcoal hover:text-white text-brand-charcoal text-[11px] font-medium px-3 py-1 rounded-full shadow-2xs transition">
+                  Quick View
+                </button>
+              </div>
+
+              <!-- Card Details -->
+              <div class="p-4">
+                <div class="flex items-center justify-between text-[11px] text-brand-muted mb-1">
+                  <span>${p.room} • ${p.material}</span>
+                  <span>Ships in ${p.leadTimeDays}d</span>
+                </div>
+                <h3 class="font-serif text-base font-semibold text-brand-charcoal group-hover:text-brand-cognac transition cursor-pointer leading-snug" data-open-qv="${p.id}">
+                  ${p.name}
+                </h3>
+
+                <!-- Price Row -->
+                <div class="mt-2 flex items-baseline gap-2">
+                  <span class="text-base font-bold text-brand-charcoal">${formatCurrency(price)}</span>
+                  ${state.pricingMode === 'B2B' ? `
+                    <span class="text-xs line-through text-brand-muted">${formatCurrency(basePrice)}</span>
+                    <span class="text-[10px] font-semibold text-brand-forest bg-brand-forest/10 px-1.5 py-0.5 rounded">Trade -${Math.round(p.b2bDiscount * 100)}%</span>
+                  ` : `
+                    <span class="text-[11px] text-brand-muted">Factory-Direct</span>
+                  `}
+                </div>
+
+                <!-- Finish / Swatch Selector -->
+                <div class="mt-3">
+                  <label class="block text-[10px] uppercase tracking-wider text-brand-muted mb-1">Finish: <strong class="text-brand-charcoal">${currentSwatch}</strong></label>
+                  <select data-swatch-select="${p.id}" aria-label="Select Finish" class="w-full px-2.5 py-1.5 text-xs bg-brand-cream border border-brand-stone rounded-lg text-brand-charcoal focus:outline-none focus:border-brand-cognac">
+                    ${p.swatches.map(sw => `<option value="${sw}" ${sw === currentSwatch ? 'selected' : ''}>${sw}</option>`).join('')}
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Customer E-Commerce Buttons: Add to Cart & Buy Now -->
+            <div class="p-4 pt-0 flex gap-2">
+              <button type="button" data-add-bag="${p.id}" class="flex-1 py-2.5 px-3 rounded-xl bg-brand-sand hover:bg-brand-stone text-brand-charcoal text-xs font-semibold transition">
+                Add to Cart
+              </button>
+              <button type="button" data-buy-now="${p.id}" class="flex-1 py-2.5 px-3 rounded-xl bg-brand-charcoal hover:bg-brand-cognac text-white text-xs font-semibold transition shadow-2xs">
+                Buy Now
+              </button>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    // --- Render Shopping Cart Drawer ---
+    function renderCart() {
+      const container = document.getElementById('cartItemsContainer');
+      const countBadge = document.getElementById('cartCountBadge');
+      const totalEl = document.getElementById('cartTotalAmount');
+      const modeLabel = document.getElementById('cartModeLabel');
+
+      const totalQty = state.cart.reduce((sum, item) => sum + item.qty, 0);
+      countBadge.textContent = totalQty;
+      modeLabel.textContent = state.pricingMode === 'B2B' ? 'Trade / B2B Tier' : 'Retail Price';
+
+      if (state.cart.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12">
+            <p class="font-serif text-base text-brand-charcoal mb-1">Your shopping cart is empty.</p>
+            <p class="text-xs text-brand-muted">Explore our sofas, dining sets, and bedroom bundles to add items.</p>
+          </div>
+        `;
+        totalEl.textContent = formatCurrency(0);
+        return;
+      }
+
+      let grandTotal = 0;
+      container.innerHTML = state.cart.map((item, idx) => {
+        const product = PRODUCTS.find(p => p.id === item.productId);
+        if (!product) return '';
+        const unitPrice = getUnitPrice(product);
+        const lineTotal = unitPrice * item.qty;
+        grandTotal += lineTotal;
+
+        return `
+          <div class="bg-white p-3.5 rounded-xl border border-brand-stone flex gap-3 items-center">
+            <img src="${product.image}" alt="${product.name}" class="w-16 h-14 rounded-lg object-cover shrink-0 bg-brand-sand" />
+            <div class="flex-1 min-w-0">
+              <p class="text-xs font-semibold text-brand-charcoal truncate">${product.name}</p>
+              <p class="text-[11px] text-brand-muted truncate">${item.swatch}</p>
+              <p class="text-xs font-bold text-brand-cognac mt-0.5">${formatCurrency(lineTotal)}</p>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <button type="button" data-cart-dec="${idx}" class="w-6 h-6 rounded bg-brand-sand hover:bg-brand-stone text-brand-charcoal text-xs font-bold">-</button>
+              <span class="text-xs font-semibold w-5 text-center">${item.qty}</span>
+              <button type="button" data-cart-inc="${idx}" class="w-6 h-6 rounded bg-brand-sand hover:bg-brand-stone text-brand-charcoal text-xs font-bold">+</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      totalEl.textContent = formatCurrency(grandTotal);
+    }
+
+    function addToCart(productId, customQty, silent) {
+      const product = PRODUCTS.find(p => p.id === productId);
+      if (!product) return;
+      const swatch = state.selectedSwatches[productId] || product.swatches[0];
+      const stepQty = customQty || (state.pricingMode === 'B2B' ? 5 : 1);
+
+      const existing = state.cart.find(i => i.productId === productId && i.swatch === swatch);
+      if (existing) {
+        existing.qty += stepQty;
+      } else {
+        state.cart.push({ productId, qty: stepQty, swatch });
+      }
+      renderCart();
+      if (!silent) {
+        showToast(`Added ${product.name} to Cart`);
+      }
+    }
+
+    // --- Open Customer Checkout Modal ---
+    function openCheckoutModal() {
+      if (state.cart.length === 0) {
+        showToast('Your cart is empty. Add a piece to checkout.');
+        return;
+      }
+
+      const listEl = document.getElementById('checkoutItemsList');
+      const countEl = document.getElementById('checkoutItemCount');
+      const totalEl = document.getElementById('checkoutGrandTotal');
+      const btnAmountEl = document.getElementById('checkoutBtnAmount');
+
+      let grandTotal = 0;
+      let totalUnits = 0;
+
+      listEl.innerHTML = state.cart.map(item => {
+        const product = PRODUCTS.find(p => p.id === item.productId);
+        if (!product) return '';
+        const unitPrice = getUnitPrice(product);
+        const sub = unitPrice * item.qty;
+        grandTotal += sub;
+        totalUnits += item.qty;
+        return `
+          <div class="flex items-center justify-between text-xs">
+            <span class="text-brand-charcoal truncate pr-2"><strong>${item.qty}x</strong> ${product.name} <span class="text-brand-muted">(${item.swatch})</span></span>
+            <span class="font-semibold text-brand-charcoal shrink-0">${formatCurrency(sub)}</span>
+          </div>
+        `;
+      }).join('');
+
+      countEl.textContent = `${totalUnits} Unit(s) • ${state.pricingMode === 'B2B' ? 'Trade Tier' : 'Retail'}`;
+      totalEl.textContent = formatCurrency(grandTotal);
+      btnAmountEl.textContent = formatCurrency(grandTotal);
+
+      document.getElementById('checkoutFormView').classList.remove('hidden');
+      document.getElementById('checkoutSuccessView').classList.add('hidden');
+      document.getElementById('checkoutModal').classList.remove('hidden');
+    }
+
+    // --- Quick View Modal ---
+    function openQuickView(productId) {
+      const product = PRODUCTS.find(p => p.id === productId);
+      if (!product) return;
+      state.currentQuickViewId = productId;
+
+      const price = getUnitPrice(product);
+      const b2bUnit = Math.round((state.currency === 'INR' ? product.priceInr : product.priceUsd) * (1 - product.b2bDiscount));
+
+      document.getElementById('qvImage').src = product.image;
+      document.getElementById('qvBadge').textContent = product.badge;
+      document.getElementById('qvSku').textContent = `SKU: ${product.sku} • ${product.room}`;
+      document.getElementById('qvTitle').textContent = product.name;
+      document.getElementById('qvPrice').textContent = `${formatCurrency(price)}`;
+      document.getElementById('qvDesc').textContent = product.description;
+      document.getElementById('qvMaterial').textContent = `${product.material} (${state.selectedSwatches[product.id]})`;
+      document.getElementById('qvDims').textContent = product.dimensions;
+      document.getElementById('qvLead').textContent = `${product.leadTimeDays} Business Days`;
+      document.getElementById('qvB2bPrice').textContent = `${formatCurrency(b2bUnit)} / unit (${Math.round(product.b2bDiscount * 100)}% off)`;
+
+      document.getElementById('quickViewModal').classList.remove('hidden');
+    }
+
+    function resetAllFilters() {
+      state.selectedRoom = 'All';
+      state.selectedMaterial = 'All';
+      state.contractOnly = false;
+      state.wishlistOnly = false;
+      state.searchQuery = '';
+      state.sortBy = 'featured';
+
+      document.getElementById('roomSelectDropdown').value = 'All';
+      document.getElementById('sortSelectDropdown').value = 'featured';
+      document.getElementById('headerSearchInput').value = '';
+      document.getElementById('mobileSearchInput').value = '';
+      updateContractButtonUI();
+      updateMaterialPillsUI();
+      renderCatalog();
+    }
+
+    function updateContractButtonUI() {
+      const btn = document.getElementById('contractGradeToggleBtn');
+      const dot = document.getElementById('contractCheckDot');
+      if (state.contractOnly) {
+        btn.classList.add('border-brand-cognac', 'bg-brand-sand');
+        dot.classList.replace('bg-brand-muted', 'bg-brand-cognac');
+      } else {
+        btn.classList.remove('border-brand-cognac', 'bg-brand-sand');
+        dot.classList.replace('bg-brand-cognac', 'bg-brand-muted');
+      }
+    }
+
+    function updateMaterialPillsUI() {
+      document.querySelectorAll('.mat-pill').forEach(pill => {
+        const mat = pill.getAttribute('data-material');
+        if (mat === state.selectedMaterial) {
+          pill.classList.add('bg-brand-charcoal', 'text-white');
+          pill.classList.remove('bg-white', 'text-brand-charcoal');
+        } else {
+          pill.classList.remove('bg-brand-charcoal', 'text-white');
+          pill.classList.add('bg-white', 'text-brand-charcoal');
+        }
+      });
+    }
+
+    function setPricingMode(mode) {
+      state.pricingMode = mode;
+      const dtcBtn = document.getElementById('modeDtcBtn');
+      const b2bBtn = document.getElementById('modeB2bBtn');
+      if (mode === 'B2B') {
+        b2bBtn.className = 'px-1.5 py-0.5 rounded bg-brand-cognac text-white font-semibold transition';
+        dtcBtn.className = 'px-1.5 py-0.5 rounded text-white/80 hover:text-white transition';
+        showToast('Switched to Big Bear Pro (Trade / B2B Pricing)');
+      } else {
+        dtcBtn.className = 'px-1.5 py-0.5 rounded bg-brand-cognac text-white font-semibold transition';
+        b2bBtn.className = 'px-1.5 py-0.5 rounded text-white/80 hover:text-white transition';
+        showToast('Switched to Standard Retail Pricing');
+      }
+      renderCatalog();
+      renderCart();
+    }
+
+    function setCurrency(curr) {
+      state.currency = curr;
+      const inrBtn = document.getElementById('currInrBtn');
+      const usdBtn = document.getElementById('currUsdBtn');
+      if (curr === 'INR') {
+        inrBtn.className = 'px-1.5 py-0.5 rounded bg-white text-brand-charcoal font-semibold';
+        usdBtn.className = 'px-1.5 py-0.5 rounded text-white/75 hover:text-white';
+      } else {
+        usdBtn.className = 'px-1.5 py-0.5 rounded bg-white text-brand-charcoal font-semibold';
+        inrBtn.className = 'px-1.5 py-0.5 rounded text-white/75 hover:text-white';
+      }
+      renderCatalog();
+      renderCart();
+    }
+
+    // --- Event Listeners Setup ---
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCatalog();
+      renderCart();
+
+      // Top bar & Mode Toggles
+      document.getElementById('modeDtcBtn').addEventListener('click', () => setPricingMode('DTC'));
+      document.getElementById('modeB2bBtn').addEventListener('click', () => setPricingMode('B2B'));
+      document.getElementById('switchToB2bModeBtn').addEventListener('click', () => {
+        setPricingMode(state.pricingMode === 'B2B' ? 'DTC' : 'B2B');
+        document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+      });
+
+      document.getElementById('currInrBtn').addEventListener('click', () => setCurrency('INR'));
+      document.getElementById('currUsdBtn').addEventListener('click', () => setCurrency('USD'));
+
+      // Mobile menu toggle & auto-close on link click
+      const mobilePanel = document.getElementById('mobileMenuPanel');
+      document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+        mobilePanel.classList.toggle('hidden');
+      });
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobilePanel.classList.add('hidden');
+        });
+      });
+
+      // Top bar free design button scroll
+      document.getElementById('topBarDesignBtn').addEventListener('click', () => {
+        document.getElementById('design-services').scrollIntoView({ behavior: 'smooth' });
+      });
+
+      // Room Tiles click
+      document.querySelectorAll('[data-room-select]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const room = btn.getAttribute('data-room-select');
+          state.selectedRoom = room;
+          document.getElementById('roomSelectDropdown').value = room;
+          renderCatalog();
+          document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // Mid-page editorial banner jump buttons
+      document.querySelectorAll('[data-room-jump]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const room = btn.getAttribute('data-room-jump');
+          state.selectedRoom = room;
+          document.getElementById('roomSelectDropdown').value = room;
+          renderCatalog();
+          document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // Footer room links
+      document.querySelectorAll('.footer-room-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const room = link.getAttribute('data-footer-room');
+          state.selectedRoom = room;
+          document.getElementById('roomSelectDropdown').value = room;
+          renderCatalog();
+          document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // Material Pills
+      document.querySelectorAll('.mat-pill').forEach(pill => {
+        pill.addEventListener('click', () => {
+          state.selectedMaterial = pill.getAttribute('data-material');
+          updateMaterialPillsUI();
+          renderCatalog();
+          document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // Dropdowns & Filters
+      document.getElementById('roomSelectDropdown').addEventListener('change', (e) => {
+        state.selectedRoom = e.target.value;
+        renderCatalog();
+      });
+
+      document.getElementById('sortSelectDropdown').addEventListener('change', (e) => {
+        state.sortBy = e.target.value;
+        renderCatalog();
+      });
+
+      document.getElementById('contractGradeToggleBtn').addEventListener('click', () => {
+        state.contractOnly = !state.contractOnly;
+        updateContractButtonUI();
+        renderCatalog();
+      });
+
+      document.getElementById('resetFiltersBtn').addEventListener('click', resetAllFilters);
+      document.getElementById('clearBannerFiltersBtn').addEventListener('click', resetAllFilters);
+
+      // Search inputs
+      const handleSearch = (val) => {
+        state.searchQuery = val;
+        renderCatalog();
+      };
+      document.getElementById('headerSearchInput').addEventListener('input', (e) => handleSearch(e.target.value));
+      document.getElementById('mobileSearchInput').addEventListener('input', (e) => handleSearch(e.target.value));
+
+      // Wishlist header toggle
+      document.getElementById('wishlistFilterBtn').addEventListener('click', () => {
+        if (state.wishlist.size === 0 && !state.wishlistOnly) {
+          showToast('Tap the heart icon on any piece to save favorites.');
+          return;
+        }
+        state.wishlistOnly = !state.wishlistOnly;
+        renderCatalog();
+        document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+      });
+
+      // Delegated clicks inside Product Grid
+      document.getElementById('productsGrid').addEventListener('click', (e) => {
+        const favBtn = e.target.closest('[data-toggle-fav]');
+        if (favBtn) {
+          const id = favBtn.getAttribute('data-toggle-fav');
+          if (state.wishlist.has(id)) {
+            state.wishlist.delete(id);
+            showToast('Removed from Saved Favorites');
+          } else {
+            state.wishlist.add(id);
+            showToast('Saved to Favorites');
+          }
+          const badge = document.getElementById('wishlistBadge');
+          badge.textContent = state.wishlist.size;
+          badge.classList.toggle('hidden', state.wishlist.size === 0);
+          renderCatalog();
+          return;
+        }
+
+        const qvTrigger = e.target.closest('[data-open-qv]');
+        if (qvTrigger) {
+          openQuickView(qvTrigger.getAttribute('data-open-qv'));
+          return;
+        }
+
+        const bagBtn = e.target.closest('[data-add-bag]');
+        if (bagBtn) {
+          addToCart(bagBtn.getAttribute('data-add-bag'));
+          return;
+        }
+
+        const buyNowBtn = e.target.closest('[data-buy-now]');
+        if (buyNowBtn) {
+          const prodId = buyNowBtn.getAttribute('data-buy-now');
+          addToCart(prodId, 1, true);
+          openCheckoutModal();
+        }
+      });
+
+      // Delegated swatch change inside Product Grid
+      document.getElementById('productsGrid').addEventListener('change', (e) => {
+        const select = e.target.closest('[data-swatch-select]');
+        if (select) {
+          const id = select.getAttribute('data-swatch-select');
+          state.selectedSwatches[id] = select.value;
+          renderCatalog();
+        }
+      });
+
+      // Quick View Modal Buttons
+      document.getElementById('closeQuickViewBtn').addEventListener('click', () => {
+        document.getElementById('quickViewModal').classList.add('hidden');
+      });
+      document.getElementById('qvAddToCartBtn').addEventListener('click', () => {
+        if (state.currentQuickViewId) {
+          addToCart(state.currentQuickViewId);
+          document.getElementById('quickViewModal').classList.add('hidden');
+        }
+      });
+      document.getElementById('qvBuyNowBtn').addEventListener('click', () => {
+        if (state.currentQuickViewId) {
+          addToCart(state.currentQuickViewId, 1, true);
+          document.getElementById('quickViewModal').classList.add('hidden');
+          openCheckoutModal();
+        }
+      });
+
+      // Cart Drawer Open/Close & Item Qty Controls
+      document.getElementById('openCartDrawerBtn').addEventListener('click', () => {
+        document.getElementById('cartDrawerBackdrop').classList.remove('hidden');
+      });
+      document.getElementById('footerQuickCheckoutBtn').addEventListener('click', () => {
+        document.getElementById('cartDrawerBackdrop').classList.remove('hidden');
+      });
+      document.getElementById('closeCartDrawerBtn').addEventListener('click', () => {
+        document.getElementById('cartDrawerBackdrop').classList.add('hidden');
+      });
+      document.getElementById('cartItemsContainer').addEventListener('click', (e) => {
+        const dec = e.target.closest('[data-cart-dec]');
+        const inc = e.target.closest('[data-cart-inc]');
+        if (dec) {
+          const idx = parseInt(dec.getAttribute('data-cart-dec'), 10);
+          if (state.cart[idx]) {
+            state.cart[idx].qty -= 1;
+            if (state.cart[idx].qty <= 0) state.cart.splice(idx, 1);
+            renderCart();
+          }
+        } else if (inc) {
+          const idx = parseInt(inc.getAttribute('data-cart-inc'), 10);
+          if (state.cart[idx]) {
+            state.cart[idx].qty += 1;
+            renderCart();
+          }
+        }
+      });
+
+      document.getElementById('proceedToCheckoutBtn').addEventListener('click', () => {
+        if (state.cart.length === 0) {
+          showToast('Add at least one piece to your cart first.');
+          return;
+        }
+        document.getElementById('cartDrawerBackdrop').classList.add('hidden');
+        openCheckoutModal();
+      });
+
+      // Checkout Modal Controls & Payment Method Selection
+      document.getElementById('closeCheckoutModalBtn').addEventListener('click', () => {
+        document.getElementById('checkoutModal').classList.add('hidden');
+      });
+
+      document.querySelectorAll('.pay-method-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.selectedPaymentMethod = btn.getAttribute('data-pay-method');
+          document.querySelectorAll('.pay-method-btn').forEach(b => {
+            b.className = 'pay-method-btn p-3 rounded-xl border border-brand-stone bg-white hover:border-brand-cognac text-left transition';
+          });
+          btn.className = 'pay-method-btn p-3 rounded-xl border-2 border-brand-cognac bg-brand-sand/60 text-left transition';
+        });
+      });
+
+      document.getElementById('checkoutFormView').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('chkName').value.trim();
+        const city = document.getElementById('chkCity').value.trim();
+        const pin = document.getElementById('chkPin').value.trim();
+        const totalText = document.getElementById('checkoutGrandTotal').textContent;
+        const orderNum = 'BB-' + Math.floor(10000 + Math.random() * 90000);
+
+        document.getElementById('confirmOrderMeta').textContent = `Order #${orderNum} • Payment Mode: ${state.selectedPaymentMethod}`;
+        document.getElementById('confirmOrderDetails').innerHTML = `
+          <div class="flex justify-between"><span class="text-brand-muted">Customer:</span><span class="font-semibold text-brand-charcoal">${name}</span></div>
+          <div class="flex justify-between"><span class="text-brand-muted">Delivery City:</span><span class="font-semibold text-brand-charcoal">${city} (${pin})</span></div>
+          <div class="flex justify-between"><span class="text-brand-muted">Payment Method:</span><span class="font-semibold text-brand-charcoal">${state.selectedPaymentMethod}</span></div>
+          <div class="flex justify-between pt-1.5 border-t border-brand-stone"><span class="text-brand-muted">Total Amount:</span><span class="font-bold text-brand-cognac">${totalText}</span></div>
+        `;
+
+        state.cart = [];
+        renderCart();
+        document.getElementById('checkoutFormView').classList.add('hidden');
+        document.getElementById('checkoutSuccessView').classList.remove('hidden');
+      });
+
+      document.getElementById('continueShoppingBtn').addEventListener('click', () => {
+        document.getElementById('checkoutModal').classList.add('hidden');
+      });
+
+      // "In The Wild" Quick Look buttons
+      document.querySelectorAll('[data-quick-buy]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          openQuickView(btn.getAttribute('data-quick-buy'));
+        });
+      });
+
+      document.getElementById('shopFeaturedRoomBtn').addEventListener('click', () => {
+        openQuickView('bb-living-07');
+      });
+
+      // Free Design Plan Form Submit
+      document.getElementById('designPlanForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('dpName').value.trim();
+        const room = document.getElementById('dpRoom').value;
+        const feedback = document.getElementById('designFormFeedback');
+        feedback.textContent = `✓ Request received for ${name} (${room}). A Big Bear interior stylist will contact you within 24 hours!`;
+        feedback.className = 'text-xs font-semibold text-brand-forest';
+        showToast('Free Design Plan request submitted!');
+        e.target.reset();
+      });
+
+      // Newsletter Subscription
+      document.getElementById('newsletterForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        document.getElementById('newsletterFeedback').classList.remove('hidden');
+        document.getElementById('newsletterInput').value = '';
+        showToast('Subscribed to Big Bear updates!');
+      });
+    });
+  </script>
+</body>
+</html>

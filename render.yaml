@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: bigbear-furniture
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
